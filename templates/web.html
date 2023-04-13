@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <center>
+    <h1>Weather App</h1>
+    <form class="form-inline" action="/" method="POST">
+        <input type="text" class="form-control" name="city" placeholder="Enter city name" required>
+        <button type="Forecast" class="btn btn-primary">Get Weather</button>
+    </form>
+    {% if error_message %}
+        <p style="color: red; font-family: 'Times New Roman', Times, serif;">{{ error_message }}</p>
+    {% endif %}
+
+    {% if city_name %}
+        <p style="font-family: 'Times New Roman', Times, serif;">Today's current temperature in {{ city_name }} is:</p>
+        <p style="font-weight: bolder; font-family: 'Times New Roman', Times, serif;" >{{temperature_celsius }} ºC ,  {{ temperature_fahrenheit }} ºF</p>
+          {% endif %}
+          
+          </body>
+        </center>
+          </html>
